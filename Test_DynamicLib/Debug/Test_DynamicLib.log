@@ -1,0 +1,2 @@
+﻿  main.cpp
+..\Debug\DynamicLib.dll : fatal error LNK1107: недопустимый или поврежденный файл: не удается прочитать по 0x350
