@@ -15,7 +15,7 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="prism.cpp">
+    <ClCompile Include="acute_prism.cpp">
       <Filter>Исходные файлы</Filter>
     </ClCompile>
     <ClCompile Include="functions.cpp">
@@ -29,7 +29,7 @@
     <ClInclude Include="list.h">
       <Filter>Файлы заголовков</Filter>
     </ClInclude>
-    <ClInclude Include="prism.h">
+    <ClInclude Include="acute_prism.h">
       <Filter>Файлы заголовков</Filter>
     </ClInclude>
     <ClInclude Include="functions.h">

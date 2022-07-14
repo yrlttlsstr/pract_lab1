@@ -6,16 +6,19 @@
 
 #include "figure.h"
 #include "acute_triangle.h"
-#include "prism.h"
+#include "acute_prism.h"
 #include "list.h"
 
 // Чтение фигур из файла.
-void fread_figures(std::ifstream& fin, list<figure*>& list);
+void fread_figures(std::ifstream&, list<figure*>&);
 
 // Вывод списока фигур.
-void print_figures(list<figure*>& list);
+void print_figures(list<figure*>&);
 
-// Поиск треугольника с максимальной стороной и призмы с максимальным объемом.
-void search_max_triangle_and_prism(list<figure*>& list, acute_triangle& max_triangle, prism& max_prism);
+// Поиск треугольника с максимальной стороной.
+void search_max_triangle(list<figure*>&, acute_triangle&);
+
+// Поиск призмы с максимальным объемом.
+void search_max_prism(list<figure*>&, acute_prism&);
 
 #endif // FUNCTIONS_H

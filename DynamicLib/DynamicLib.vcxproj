@@ -141,14 +141,14 @@
   <ItemGroup>
     <ClCompile Include="acute_triangle.cpp" />
     <ClCompile Include="functions.cpp" />
-    <ClCompile Include="prism.cpp" />
+    <ClCompile Include="acute_prism.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="acute_triangle.h" />
     <ClInclude Include="figure.h" />
     <ClInclude Include="functions.h" />
     <ClInclude Include="list.h" />
-    <ClInclude Include="prism.h" />
+    <ClInclude Include="acute_prism.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

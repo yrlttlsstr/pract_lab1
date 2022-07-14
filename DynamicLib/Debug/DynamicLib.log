@@ -1,6 +1,6 @@
 ﻿  acute_triangle.cpp
   functions.cpp
-  prism.cpp
+  acute_prism.cpp
   Создание кода...
      Создается библиотека C:\Users\АРИША\source\repos\Libs\Debug\DynamicLib.lib и объект C:\Users\АРИША\source\repos\Libs\Debug\DynamicLib.exp
   DynamicLib.vcxproj -> C:\Users\АРИША\source\repos\Libs\Debug\DynamicLib.dll

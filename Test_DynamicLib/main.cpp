@@ -2,11 +2,11 @@
 #include <fstream>
 #include <Windows.h>
 
-#include "..\DynamicLib\acute_triangle.h"
-#include "..\DynamicLib\prism.h"
-#include "..\DynamicLib\list.h"
-#include "..\DynamicLib\functions.h"
-#include "..\DynamicLib\figure.h"
+#include "acute_triangle.h"
+#include "acute_prism.h"
+#include "list.h"
+#include "functions.h"
+#include "figure.h"
 
 int main() {
 	HINSTANCE load;
@@ -21,10 +21,10 @@ int main() {
 	list<figure*> List;
 	std::ifstream fin("input.txt");
 
-	typedef void (*fread_figuresDLL) (std::ifstream&, list<figure*>&);
+	typedef void (*fread_figuresDLL) (list<figure*>&);
 	fread_figuresDLL fread_figures;
 	fread_figures = (fread_figuresDLL)GetProcAddress(load, "fread_figures");
-	fread_figures(fin, List);
+	fread_figures(List);
 
 	typedef void (*print_figuresDLL) (list<figure*>&);
 	print_figuresDLL print_figures;
@@ -32,18 +32,21 @@ int main() {
 	print_figures(List);
 
 	acute_triangle max_triangle;
-	prism max_prism;
+	acute_prism max_prism;
 
-	typedef void(*search_max_triangle_and_prismDLL) (list<figure*>&, acute_triangle&, prism&);
-	search_max_triangle_and_prismDLL search_max_triangle_and_prism;
-	search_max_triangle_and_prism = (search_max_triangle_and_prismDLL)GetProcAddress(load, "search_max_triangle_and_prism");
-	search_max_triangle_and_prism(List, max_triangle, max_prism);
+	typedef void(*search_max_triangleDLL) (list<figure*>&, acute_triangle&);
+	search_max_triangleDLL search_max_triangle;
+	search_max_triangle = (search_max_triangleDLL)GetProcAddress(load, "search_max_triangle");
+	search_max_triangle(List, max_triangle);
+
+	typedef void(*search_max_prismDLL) (list<figure*>&, acute_prism&);
+	search_max_prismDLL search_max_prism;
+	search_max_prism = (search_max_prismDLL)GetProcAddress(load, "search_max_prism");
+	search_max_prism(List, max_prism);
 
 	max_triangle.print();
 	max_prism.print();
 
 	FreeLibrary(load);
-
-	fin.close();
 	return 0;
 }

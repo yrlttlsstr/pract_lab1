@@ -69,7 +69,7 @@ double acute_triangle::get_area() const {
 
 // Метод печатает объект.
 void acute_triangle::print() const {
-	std::cout << "Info about acute triangle:" <<
+	std::cout << "Acute triangle:" <<
 		"\n  Side a: " << get_side_a() <<
 		"\n  Side b: " << get_side_b() <<
 		"\n  Side c: " << get_side_c() <<

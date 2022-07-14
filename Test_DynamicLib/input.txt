@@ -1,0 +1,4 @@
+3
+prism 5 6 7 4
+triangle 5 6 7
+triange 3 6 6
